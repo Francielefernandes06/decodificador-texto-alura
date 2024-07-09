@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 150%;
+}
+
+body {
+    background-color: #F3F5FC;
+
+
+}
+
+.logo {
+    margin-top: 20px;
+
+}
+
+.main {
+    display: flex;
+    margin: -3% 18%
+}
+
+.informacao {
+    font-size: 15px;
+}
+
+.entrada {
+    margin-top: 100px;
+    border: none;
+    background: transparent;
+}
+
+/* Rectangle 1 */
+/* .area-e-buttons{
+ 
+  margin-left: 10rem;
+  width: 100%;
+} */
+.saida {
+    background-color: transparent;
+    border: none;
+    width: max-content;
+    height: 266px;
+    padding: 16px;
+}
+
+.area-e-buttons {
+  margin-left: 10rem;
+    background-image: url(./images/image.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 32px;
+    max-width: 100%;
+    display: block;
+    position: relative;
+    left: auto;
+    width: 300px;
+    height: 544px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+
+}
+
+.texto-area{
+  font-family: Inter;
+font-size: 24px;
+font-weight: 700;
+line-height: 28.8px;
+text-align: center;
+
+}
+
+.subtexto-area{
+  font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+
+}
+
+.botoes {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+    
+
+}
+#copy{
+ display: none; 
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btns button {
+    background-color: #FFFFFF;
+    color: #0A3871;
+    border-radius: 15px;
+    border-color: #0A3871;
+}
+
+.encriptar {
+    background-color: #0A3871;
+    color: rgb(37, 4, 75);
+    border-radius: 15px;
+    border-color: blueviolet;
+    font-size: 25px;
+}
+
+.descriptografar {
+    background-color: #D8DFE8;
+    color: rgb(37, 4, 75);
+    margin-left: 30px;
+    border-radius: 15px;
+    border-color: blueviolet;
+    font-size: 25px;
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+}

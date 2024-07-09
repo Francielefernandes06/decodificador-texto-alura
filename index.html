@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="p-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de texto</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <a href="https://www.alura.com.br"><img class="logo" src="./images/logoalura.png" alt="Logo Alura"></a>
+        </header>
+    <main class="main">
+    <section>
+        <textarea class="entrada" id="entrada" cols="20" rows="6" placeholder="Digite seu texto:"></textarea>
+      
+        <div>
+            <h6 class="informacao">Apenas letras maiúsculas e minúsculas</h6>
+        </div>
+
+        <div class="botoes">
+            <button class="encriptar" onclick="botaoEncriptar()">
+                Criptografar
+            </button>
+            <button class="descriptografar" onclick="botaoDesencriptar()">
+                Descriptografar
+            </button>
+        </div>
+
+    </section>
+   
+    <section class="area-e-buttons">
+    <textarea class="saida" id="saida" cols="20" rows="10">
+    </textarea>
+    <div class="area-texto">
+      <h2 class="texto-area">Nenhuma mensagem encontrada</h2>
+      <p class="subtexto-area">Digite um texto que você deseja criptografar ou descriptografar.</p>`
+    </div>
+ 
+    <div class="btns">
+    <button id="copy" class="botoes" onclick="copia()">Copiar texto</button>
+    </div>
+    </section>
+    
+    </main>
+    <script src="script.js"></script>
+
+<footer>
+        <br>
+        <p>&copy; 2024 Decodificador de Texto
+        <br>
+        <a href="https://www.linkedin.com/in/monaliza-pereira/" target="_blanck"><img src="./images/clipart2670965.png" width="26" height="26"></a>
+        <a href="https://github.com/monalizaps" target="_blanck"><img src="./images/pngwing.com.png" width="32" height="32"></a>
+        <br>
+        </p>
+    </footer>
+</footer>
+    
+</body>
+</html>
