@@ -1,30 +1,37 @@
 const inputTexto = document.querySelector(".entrada")
 const mensagem = document.querySelector(".saida")
-const copiar = document.querySelector(".copy")
+const copiar = document.querySelector("#copy")
 const areaButtons = document.querySelector(".area-e-buttons")
-const areaTexto = document.querySelector(".area-texto")
+const areaTextoH2 = document.querySelector(".texto-area")
+const areaSubTexto= document.querySelector(".subtexto-area")
 
 
 
 function botaoEncriptar() {
   const textoEncriptado = encriptar(inputTexto.value);
   mensagem.value = textoEncriptado;
-  areaButtons.style.backgroundImage = "none";
   copiar.style.display = "block";
-  areaTexto.style.display = "none";
+  areaTextoH2.style.display = "none";
+  areaSubTexto.style.display = "none";
+  areaButtons.style.backgroundImage = "none";
+  
 }
 
 function encriptar(stringEncriptada) {
-  let matrizCodigo = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+  const matrizCodigo = {
+      'a': 'ai', 'b': 'bt', 'c': 'ct', 'd': 'dj', 'e': 'ex', 'f': 'fu', 'g': 'gz', 'h': 'hj', 'i': 'ix',
+      'j': 'jt', 'k': 'kv', 'l': 'ly', 'm': 'mz', 'n': 'nx', 'o': 'ov', 'p': 'pt', 'q': 'qv', 'r': 'rw',
+      's': 'sz', 't': 'tv', 'u': 'uv', 'v': 'vw', 'w': 'wx', 'x': 'xy', 'y': 'yz', 'z': 'zx'
+  };
   stringEncriptada = stringEncriptada.toLowerCase();
 
-  for(let i = 0; i < matrizCodigo.length; i++) {
-      if(stringEncriptada.includes(matrizCodigo[i][0])) {
-          stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
-      }
+  let textoEncriptado = '';
+  for (let i = 0; i < stringEncriptada.length; i++) {
+      const char = stringEncriptada[i];
+      textoEncriptado += matrizCodigo[char] || char;
   }
 
-  return stringEncriptada;
+  return textoEncriptado;
 }
 
 function botaoDesencriptar() {
@@ -34,16 +41,20 @@ function botaoDesencriptar() {
 }
 
 function desencriptar(stringDesencriptada) {
-  let matrizCodigo = [["ai", "a"], ["enter", "e"], ["imes", "i"], ["ober", "o"], ["ufat", "u"]];
+  const matrizCodigo = {
+      'ai': 'a', 'bt': 'b', 'ct': 'c', 'dj': 'd', 'ex': 'e', 'fu': 'f', 'gz': 'g', 'hj': 'h', 'ix': 'i',
+      'jt': 'j', 'kv': 'k', 'ly': 'l', 'mz': 'm', 'nx': 'n', 'ov': 'o', 'pt': 'p', 'qv': 'q', 'rw': 'r',
+      'sz': 's', 'tv': 't', 'uv': 'u', 'vw': 'v', 'wx': 'w', 'xy': 'x', 'yz': 'y', 'zx': 'z'
+  };
   stringDesencriptada = stringDesencriptada.toLowerCase();
 
-  for (let i = 0; i < matrizCodigo.length; i++) {
-      if (stringDesencriptada.includes(matrizCodigo[i][0])) {
-          stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
-      }
+  let textoDesencriptado = stringDesencriptada;
+  for (const key in matrizCodigo) {
+      const regex = new RegExp(key, 'g');
+      textoDesencriptado = textoDesencriptado.replace(regex, matrizCodigo[key]);
   }
 
-  return stringDesencriptada;
+  return textoDesencriptado;
 }
 
 async function copia() {
@@ -66,4 +77,3 @@ function limpeza() {
 onclick="botaoEncriptar()";
 onclick="botaoDesencriptar()";
 onclick="copia()";
-onclick="limpeza()";
