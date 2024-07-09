@@ -25,6 +25,10 @@ body {
 
 .informacao {
     font-size: 15px;
+    align-items: center;
+    display: flex;
+    gap: 4px;
+
 }
 
 .entrada {
@@ -54,6 +58,10 @@ body {
 .entrada:focus{
     outline: none;
 }
+.entrada::placeholder{
+    color:#0A3871;
+    font-size: 15px;
+}
 
 .area-e-buttons {
     margin-left: 10rem;
@@ -79,6 +87,8 @@ body {
     font-weight: 700;
     line-height: 28.8px;
     text-align: center;
+    color:  #343A40;
+
 
 }
 
@@ -88,6 +98,8 @@ body {
     font-weight: 400;
     line-height: 24px;
     text-align: center;
+    color: #495057;
+
 
 }
 
