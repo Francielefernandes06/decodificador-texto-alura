@@ -45,10 +45,18 @@ body {
     width: max-content;
     height: 266px;
     padding: 16px;
+    max-width: 9rem;
+}
+.saida:focus{
+    outline: none;
+}
+
+.entrada:focus{
+    outline: none;
 }
 
 .area-e-buttons {
-  margin-left: 10rem;
+    margin-left: 10rem;
     background-image: url(./images/image.png);
     background-size: 80%;
     background-repeat: no-repeat;
@@ -65,25 +73,25 @@ body {
 
 }
 
-.texto-area{
-  font-family: Inter;
-font-size: 24px;
-font-weight: 700;
-line-height: 28.8px;
-text-align: center;
+.texto-area {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-align: center;
 
 }
 
-.subtexto-area{
-  font-family: Inter;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-text-align: center;
+.subtexto-area {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
 
 }
 
-.botoes {
+.botoes{
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
@@ -91,11 +99,18 @@ text-align: center;
     text-align: center;
     padding: 10px;
     width: 90%;
-    
-
 }
-#copy{
- display: none; 
+
+.botoes-teste{
+    display: flex;
+    justify-content: initial;
+    align-items: normal;
+    gap:1rem;
+}
+
+#copy {
+    display: none;
+    margin-top: 4rem;
 }
 
 .btns {
@@ -113,19 +128,33 @@ text-align: center;
 
 .encriptar {
     background-color: #0A3871;
-    color: rgb(37, 4, 75);
+    color: #FFFFFF;
     border-radius: 15px;
-    border-color: blueviolet;
-    font-size: 25px;
+    border-color: #0A3871;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+
+
 }
 
 .descriptografar {
-    background-color: #D8DFE8;
-    color: rgb(37, 4, 75);
-    margin-left: 30px;
+    background-color: #FFFFFF;
+    color: #0A3871;
     border-radius: 15px;
-    border-color: blueviolet;
-    font-size: 25px;
+    border-color: #0A3871;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    
 }
 
 p {
